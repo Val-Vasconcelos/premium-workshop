@@ -124,7 +124,6 @@
             cursor: pointer;
         }
     </style>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <div class="container">
@@ -134,12 +133,12 @@
         </div>
         
         <h2>Formulário de Inscrição</h2>
-        <form id="registrationForm" action="/submit" method="POST">
-            <input type="text" name="name" placeholder="Nome Completo" required>
-            <input type="email" name="email" placeholder="E-mail" required>
-            <input type="tel" name="phone" placeholder="Telefone" required>
-            <input type="text" name="city" placeholder="Cidade" required>
-            <textarea name="message" placeholder="Mensagem" rows="4"></textarea>
+        <form id="registrationForm">
+            <input type="text" placeholder="Nome Completo" required>
+            <input type="email" placeholder="E-mail" required>
+            <input type="tel" placeholder="Telefone" required>
+            <input type="text" placeholder="Cidade" required>
+            <textarea placeholder="Mensagem" rows="4"></textarea>
             
             <div class="checkbox-container">
                 <input type="checkbox" id="terms" required>
@@ -148,10 +147,6 @@
             <div class="checkbox-container">
                 <input type="checkbox" id="privacy" required>
                 <label for="privacy">Li e aceito a <span class="terms-link" onclick="togglePrivacy()">Política de Privacidade</span></label>
-            </div>
-            
-            <div class="captcha">
-                <div class="g-recaptcha" data-sitekey="6LcKwk8qAAAAAIN5LvsoTUs8r904Il9-2wkW30AO"></div>
             </div>
 
             <button type="submit">Enviar Inscrição</button>
@@ -191,8 +186,8 @@
 
         document.getElementById('registrationForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            // Aqui você pode adicionar a lógica para enviar o formulário.
             alert('Inscrição enviada com sucesso!');
+            // Aqui você pode adicionar a lógica para enviar o formulário.
         });
     </script>
 </body>
