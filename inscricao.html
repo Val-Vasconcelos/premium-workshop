@@ -12,9 +12,10 @@
             background-color: #f0f0f0;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
+            align-items: flex-start; /* Muda para flex-start para permitir rolagem */
+            min-height: 100vh; /* Garante que a altura mínima seja 100vh */
+            overflow-y: auto; /* Permite rolagem vertical */
+            padding: 20px; /* Adiciona algum espaço nas bordas */
         }
 
         .container {
@@ -22,7 +23,7 @@
             border-radius: 15px;
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
             padding: 30px;
-            width: 90%;
+            width: 100%; /* Faz o contêiner ocupar 100% da largura */
             max-width: 800px;
             backdrop-filter: blur(10px);
             animation: fadeIn 1s ease-in-out;
