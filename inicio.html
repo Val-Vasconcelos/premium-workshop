@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Workshop de Vendas & Atendimento. Capacite sua equipe com foco no atendimento humanizado e vendas estratégicas.">
+    <meta name="keywords" content="workshop, vendas, atendimento humanizado, treinamento, capacitação empresarial, serviços de vendas">
+    <meta name="author" content="Equipe de Especialistas em Vendas">
+    <title>Página de Vendas Premium - Workshop de Vendas & Atendimento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: #f3f3f3;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #4E342E;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            z-index: 100;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        nav {
+            background-color: #3E2723;
+            position: sticky;
+            top: 0;
+            z-index: 200;
+        }
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            padding: 10px 20px;
+            margin: 0;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: #5D4037;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                display: flex;
+                overflow-x: auto;
+                white-space: nowrap;
+                padding: 10px 0;
+            }
+            nav ul li {
+                margin: 0 15px;
+            }
+            nav ul li a {
+                padding: 10px 20px;
+            }
+        }
+        .hero {
+            background: url('images/hero-background.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            width: 100%;
+            padding: 0 20px;
+        }
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .hero button {
+            background-color: #6F4C3E;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            animation: fadeIn 2.5s ease-in-out;
+            margin-top: 20px;
+        }
+        .hero button:hover {
+            background-color: #FF5722;
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .sobre {
+            padding: 80px 20px;
+            background-color: #fff;
+            text-align: center;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        .sobre h2 {
+            font-size: 2.5rem;
+            color: #4E342E;
+            margin-bottom: 40px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .sobre p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .slider {
+            position: relative;
+            max-width: 100%;
+            margin: 50px auto;
+        }
+        .slider img {
+            width: 100%;
+            border-radius: 15px;
+            animation: fadeInSlider 1.5s ease-in-out;
+        }
+        @keyframes fadeInSlider {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .slider .prev, .slider .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+        .slider .prev {
+            left: 10px;
+        }
+        .slider .next {
+            right: 10px;
+        }
+        .slider .prev:hover, .slider .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .servicos {
+            padding: 80px 20px;
+            background-color: #f3f3f3;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        .servicos h2 {
+            font-size: 2.5rem;
+            color: #4E342E;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .servicos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .servico {
+            background-color: #fff;
+            padding: 40px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .servico i {
+            font-size: 3rem;
+            color: #FF7043;
+            margin-bottom: 20px;
+        }
+        .servico h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #3E2723;
+        }
+        .servico p {
+            color: #666;
+            line-height: 1.6;
+        }
+        .servico:hover {
+            transform: translateY(-10px);
+        }
+        .depoimentos {
+            background-color: #FFF8E1;
+            padding: 80px 20px;
+            text-align: center;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        .depoimentos h2 {
+            font-size: 2.5rem;
+            color: #4E342E;
+            margin-bottom: 40px;
+        }
+        .depoimento {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .depoimento p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+        .depoimento h3 {
+            font-size: 1.2rem;
+            color: #3E2723;
+            margin-top: 20px;
+        }
+        .contato {
+            padding: 80px 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+        .contato h2 {
+            font-size: 2.5rem;
+            color: #4E342E;
+            margin-bottom: 40px;
+        }
+        .contato form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .contato input, .contato textarea {
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            width: 100%;
+        }
+        .contato button {
+            background-color: #6F4C3E;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contato button:hover {
+            background-color: #FF5722;
+        }
+        .feedback {
+            margin-top: 20px;
+            color: #4CAF50;
+            font-size: 1.1rem;
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1.2rem;
+            }
+            .sobre h2, .servicos h2, .depoimentos h2, .contato h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <script>
+        function showFeedback() {
+            const feedback = document.querySelector('.feedback');
+            feedback.style.display = 'block';
+            setTimeout(() => {
+                feedback.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Premium - Workshop de Vendas & Atendimento Especializado</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#hero">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contato">Contato</a></li>
+    </ul>
+</nav>
+
+<div class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <h2>Transforme seu Atendimento</h2>
+    <p>Capacite sua equipe com técnicas eficazes de vendas</p>
+    <button onclick="window.location.href='inscricao.html'">Inscreva-se Agora</button>
+</div>
+
+<section class="sobre" id="sobre">
+    <h2>Sobre Nós</h2>
+    <p>Oferecemos um workshop inovador que une teoria e prática, focado em resultados tangíveis para sua equipe de vendas.</p>
+</section>
+
+<section class="servicos" id="servicos">
+    <h2>Nossos Serviços</h2>
+    <div class="servicos-grid">
+        <div class="servico">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <h3>Treinamento de Vendas</h3>
+            <p>Desenvolva habilidades essenciais para aumentar suas vendas e a satisfação do cliente.</p>
+        </div>
+        <div class="servico">
+            <i class="fas fa-headset"></i>
+            <h3>Atendimento Humanizado</h3>
+            <p>Aprenda a construir relacionamentos duradouros com seus clientes.</p>
+        </div>
+        <div class="servico">
+            <i class="fas fa-clipboard-list"></i>
+            <h3>Estratégias Personalizadas</h3>
+            <p>Implante estratégias específicas para o seu negócio e mercado.</p>
+        </div>
+    </div>
+</section>
+
+<section class="depoimentos" id="depoimentos">
+    <h2>Depoimentos</h2>
+    <div class="depoimento">
+        <p>"O workshop foi transformador! Nossa equipe se tornou mais confiante e eficiente."</p>
+        <h3>- João Silva</h3>
+    </div>
+    <div class="depoimento">
+        <p>"Aprendi a importância do atendimento humanizado e como isso impacta nas vendas."</p>
+        <h3>- Maria Oliveira</h3>
+    </div>
+</section>
+
+<section class="contato" id="contato">
+    <h2>Entre em Contato</h2>
+    <form onsubmit="showFeedback(); return false;">
+        <input type="text" placeholder="Seu Nome" required aria-required="true">
+        <input type="email" placeholder="Seu E-mail" required aria-required="true">
+        <textarea placeholder="Sua Mensagem" rows="5" required aria-required="true"></textarea>
+        <button type="submit">Enviar Mensagem</button>
+    </form>
+    <div class="feedback">Mensagem enviada com sucesso!</div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Estratégias Comerciais. Todos os direitos reservados.</p>
+    <p><a href="mailto:val.estrategistadevendas@gmail.com">val.estrategistadevendas@gmail.com</a></p>
+</footer>
+
+</body>
+      </html>
